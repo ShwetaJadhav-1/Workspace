@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+void Display(int Arr[], int iSize)
+{
+    int iCnt = 0;
+
+    while(iCnt < iSize)
+    {
+        printf("%d\t",Arr[iCnt]);
+        iCnt++;
+    }    
+}    
+
+int main()
+{
+    int Brr[5] = {10,20,30,40,50};
+
+    Display(Brr,5);
+
+    return 0;
+}

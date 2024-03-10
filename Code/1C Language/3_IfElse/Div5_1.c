@@ -1,0 +1,103 @@
+////////////////////////////////////////////////////////////////////////
+// steps to follow while programming
+///////////////////////////////////////////////////////////////////////
+
+// step 1	:	Understand the problem statement
+// step 2	:	Write the algorithm
+// step 3	:	Decide the programming language
+// step 4	:	write the program
+// step 5	:	test the program
+
+/////////////////////////////////////////////////////////////////////
+// Problem statement : Accept the number from user and check whether it is divisible by 5 or not
+// Input : 23
+// Output : 23 is not divisible by 5
+//
+// Input : 25
+// Output : 25 is not divisible by 5
+//
+// Input : -20
+// Output : -20 is not divisible by 5
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Algorithm
+///////////////////////////////////////////////////////////////////////
+
+/*
+	START
+		Accept number from user as No
+		Divide that No by 5 and check the value of reminder
+		If the value is 0
+			Then display as No is divisible by 5
+		Otherwise
+			Display as No is not divisible by 5
+
+	END
+*/
+
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+// 
+// Function Name:	DivisibleByFive
+// Description	:	To check whether the input is divisible by 5 or not
+// Input		:	Integer
+// Output		:	Integer
+// Author		:	Shweta Balaram Jadhav (1377)
+// Date			:	12/10/2022
+//
+////////////////////////////////////////////////////////////////////////
+
+int DivisibleByFive(int iNo)
+{
+	int iAns = 0;
+	iAns = iNo % 5;
+	
+	if(iAns == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+// Entry point of the application
+///////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iValue = 0;
+	int iRet = 0;
+	
+	printf("Enter the number : \n");
+	scanf("%d",&iValue);
+	
+	iRet = DivisibleByFive(iValue);
+	
+	if(iRet == 0)
+	{
+		printf("%d is not divisible by 5 \n",iValue);
+	}
+	else
+	{
+		printf("%d is divisible by 5 \n",iValue);
+	}
+	
+	return 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+// Result
+//
+// Input : 25
+// Output : 25 is not divisible by 5
+//
+////////////////////////////////////////////////////////////////////////////

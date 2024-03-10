@@ -1,0 +1,96 @@
+#include<iostream>
+using namespace std;
+
+// Problems on N numbers
+
+class ArrayX
+{
+    public:
+        int * Arr;
+        int iSize;
+
+        ArrayX(int i)
+        {
+            iSize = i;
+            Arr = new int[iSize];
+        }
+
+        ~ArrayX()   // Destructor
+        {
+            delete []Arr; // [] All memory gets cleared. If not given it will delete only first element.
+        }
+        
+        void Accept() 
+        {
+            cout<<"Please enter the numbers : "<<"\n";
+            int iCnt = 0;
+
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                cin>>Arr[iCnt];
+            }
+        }
+        
+        void Display() 
+        {
+            cout<<"Elemets of array are : "<<"\n";
+            int iCnt = 0;
+
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                cout<<Arr[iCnt]<<"\t";
+            }
+            cout<<"\n";
+        }
+        
+        int AddEvenNumber() 
+        {
+            int iSum = 0;
+            int iCnt = 0;
+
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                if((Arr[iCnt] % 2) == 0)
+                {
+                    iSum = iSum + Arr[iCnt];
+                }
+            }
+            return iSum;    
+        }
+        
+        int AddOddNumber()
+        {
+            int iSum = 0;
+            int iCnt = 0;
+
+            for(iCnt = 0; iCnt < iSize; iCnt++)
+            {
+                if((Arr[iCnt] % 2) != 0)
+                {
+                    iSum = iSum + Arr[iCnt];
+                }
+            }
+            return iSum; 
+        }
+};
+int main()
+{
+    int iLength = 0;
+    int iRet = 0;
+
+    cout<<"Enter the size"<<"\n";
+    cin>>iLength;
+
+    ArrayX obj(iLength);
+
+    obj.Accept();
+    obj.Display();
+
+    iRet = obj.AddEvenNumber();
+    cout<<"Addition of Even Number is : "<<iRet<<"\n";
+
+    iRet = obj.AddOddNumber();
+    cout<<"Addition of Odd Number is : "<<iRet<<"\n";
+
+    return 0;
+}

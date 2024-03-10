@@ -1,0 +1,34 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class GUI4Adaptor
+{
+    public static void main(String A[])
+    {
+        MarvellousFrame mobj = new MarvellousFrame("Marvellous PPA41");
+    }
+}
+
+class MarvellousFrame
+{
+    public MarvellousFrame(String title)
+    {
+        Frame fobj = new Frame(title);
+
+        fobj.setSize(500,500);
+
+        fobj.setVisible(true);     
+        
+        fobj.addWindowListener(new MarvellousListener());
+    }
+}
+
+class MarvellousListener extends WindowAdapter
+{
+    
+    public void windowClosing(WindowEvent obj) 
+    {
+        System.exit(0);
+    }
+   
+}

@@ -1,0 +1,41 @@
+
+
+class CloneDemo1
+{
+    public static void main(String A[]) 
+    {
+        try
+        {
+            Employee eobj1 = new Employee(101,"Rahul",11000);
+            Employee eobj2 = (Employee)eobj1.clone();
+
+            System.out.println("Name of first employee : "+eobj1.Name);
+            System.out.println("Name of second employee : "+eobj2.Name);
+
+            System.out.println("Salary of first employee : "+eobj1.iSalary);
+            System.out.println("Salary of second employee : "+eobj2.iSalary);
+        }
+        catch(CloneNotSupportedException obj)
+        {}
+    }
+}
+
+class Employee implements Cloneable
+{
+    public int Eid;
+    public String Name;
+    public int iSalary;
+
+    public Employee(int No, String str, int Value)
+    {
+        this.Eid = No;
+        this.Name = str;
+        this.iSalary = Value;
+    }
+
+    public Object clone() throws CloneNotSupportedException
+    {
+        return super.clone();
+    }
+}
+

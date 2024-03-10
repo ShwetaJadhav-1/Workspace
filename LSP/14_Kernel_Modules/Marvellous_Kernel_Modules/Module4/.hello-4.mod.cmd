@@ -1,0 +1,1 @@
+cmd_/home/shweta/Desktop/LSP/14_Marvellous_Kernel_Modules/Marvellous_Kernel_Modules/Module4/hello-4.mod := { echo  /home/shweta/Desktop/LSP/14_Marvellous_Kernel_Modules/Marvellous_Kernel_Modules/Module4/hello-4.o;  echo; } > /home/shweta/Desktop/LSP/14_Marvellous_Kernel_Modules/Marvellous_Kernel_Modules/Module4/hello-4.mod
